@@ -1,4 +1,4 @@
-# 💥 OM CODES - Japanese Manga Style Portfolio 💥
+# 🎐 OM CODES - Japanese Manga Style Portfolio 🎐
 
 ![Portfolio Preview](./images/showcase.jpg)
 
@@ -71,4 +71,5 @@ Portfolio Design/
 ---
 © 2026 OM CODES. All Rights Reserved &
 Developed  by **OM**
+
 
