@@ -28,6 +28,7 @@ You can view the live project here: [https://modernmangaportfolio.netlify.app/](
 *   **Interactive Panels**: Project cards that transition from grayscale to full color on hover.
 *   **Responsive Layout**: Fully optimized for all devices, including a dedicated mobile navigation system.
 *   **Halftone Patterns**: Authentic screentone background patterns for that classic manga feel.
+*   **Custom G-Pen Cursor**: A stylized ink pen cursor with a dynamic digital ink trail.
 
 ## 🛠️ Technologies Used
 
