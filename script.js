@@ -112,3 +112,61 @@ themeToggle.addEventListener('click', () => {
         themeIcon.classList.replace('fa-sun', 'fa-moon');
     }
 });
+
+// Custom Cursor and Ink Trail Logic
+const cursorDot = document.querySelector('[data-cursor-dot]');
+const cursorOutline = document.querySelector('[data-cursor-outline]');
+
+window.addEventListener('mousemove', function (e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    // Move Dot
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+    // Move Outline with slight delay
+    cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, { duration: 500, fill: "forwards" });
+
+    // Ink Trail Effect
+    createInkParticle(posX, posY);
+});
+
+// Create ephemeral ink particles
+function createInkParticle(x, y) {
+    const particle = document.createElement('div');
+    particle.classList.add('ink-particle');
+
+    // Vary size slightly for organic feel
+    const size = Math.random() * 6 + 2;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+
+    document.body.appendChild(particle);
+
+    // Remove particle after animation
+    setTimeout(() => {
+        particle.remove();
+    }, 800);
+}
+
+// Interactive Hover States
+document.querySelectorAll('a, button, .manga-btn').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        cursorOutline.style.width = "60px";
+        cursorOutline.style.height = "60px";
+        cursorOutline.style.borderColor = "var(--manga-accent)";
+    });
+    el.addEventListener('mouseleave', () => {
+        cursorOutline.style.width = "40px";
+        cursorOutline.style.height = "40px";
+        cursorOutline.style.borderColor = "var(--manga-black)";
+    });
+});
+
