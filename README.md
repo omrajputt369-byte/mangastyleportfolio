@@ -1,6 +1,6 @@
 # 💥 OM CODES - Japanese Manga Style Portfolio 💥
 
-![Portfolio Preview](./images/PF.png)
+![Portfolio Preview](./images/showcase.jpg)
 
 <p align="center">
   <a href="https://github.com/omrajputt369-byte" target="_blank">
