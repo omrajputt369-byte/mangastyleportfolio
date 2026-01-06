@@ -93,7 +93,9 @@ const themeIcon = themeToggle.querySelector('i');
 
 // Persistence: Check localStorage for theme preference
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
+
+// Default to Dark Mode if 'dark' or no preference is saved
+if (savedTheme === 'dark' || !savedTheme) {
     body.classList.add('dark-mode');
     themeIcon.classList.replace('fa-moon', 'fa-sun');
 }
